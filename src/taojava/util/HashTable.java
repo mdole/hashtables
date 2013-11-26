@@ -39,6 +39,7 @@ public class HashTable<K,V> {
       [ ] The `remove` method is not implemented.
 
     Features to add.
+      [ ] A real implementation of containsKey.
       [ ] An iterator for the values.
       [ ] An iterator for the keys.
  */
@@ -111,6 +112,19 @@ public class HashTable<K,V> {
     // +-----------+-------------------------------------------------------
     // | Observers |
     // +-----------+
+
+    /**
+     * Determine if the hash table contains a particular key.
+     */
+    public boolean containsKey(K key) throws Exception {
+        // STUB/HACK
+        try {
+            get(key);
+            return true;
+        } catch (Exception e) {
+            return false;
+        } // try/catch
+    } // containsKey(K)
 
     /**
      * Dump the hash table.
