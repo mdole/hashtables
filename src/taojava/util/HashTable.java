@@ -21,6 +21,12 @@ public class HashTable<K,V> {
     We expand the hash table when the load factor is greater than
     LOAD_FACTOR (see constants below).
 
+    Since some combinations of data and hash function may lead to
+    a situation in which we get a surpring relationship between values
+    (e.g., all the hash values are 0 mod 32), when expanding the hash
+    table, we incorporate a random number.  (Is this likely to make a
+    big difference?  Who knows.  But it's likely to be fun.)
+
     For experimentation and such, we allow the client to supply a
     Reporter that is used to report behind-the-scenes work, such as
     calls to expand the table.
@@ -75,8 +81,8 @@ public class HashTable<K,V> {
     boolean REPORT_BASIC_CALLS = false;
 
     /**
-     * To help avoid some DoS attacks, we use a random number generator
-     * when we expand the size of the hash table.
+     * Our helpful random number generator, used primarily when 
+     * expanding the size of the table..
      */
     Random rand;
 
