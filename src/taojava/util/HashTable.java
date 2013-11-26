@@ -53,6 +53,12 @@ public class HashTable<K,V> {
      */
     static final double LOAD_FACTOR = 0.5;
 
+    /**
+     * The offset to use in linear probes.  (We choose a prime because
+     * that helps ensure that we cover all of the spaces.)
+     */
+    static final double PROBE_OFFSET = 17;
+
     // +--------+----------------------------------------------------------
     // | Fields |
     // +--------+
