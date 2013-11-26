@@ -32,9 +32,10 @@ public class HashTableExpt {
         dict.reportBasicCalls(false);
 
         // Conduct some of the experiments
-        repeatedSetExpt(pen,dict);
-        // setExpt(pen,dict);
-        // removeExpt(pen,dict);
+        repeatedSetExpt(pen, dict);
+        // matchingKeysExpt(pen, dict);
+        // setExpt(pen, dict);
+        // removeExpt(pen, dict);
 
     } // main(String[])
 
@@ -49,6 +50,22 @@ public class HashTableExpt {
             HashTable<String,String> dict) {
         // STUB
     } // repeatedSetExpt(PrintWriter, HashTable)
+
+    /**
+     * Explore what happens when we use two keys that map to the
+     * same location.
+     */
+    public static void matchingKeysExpt(PrintWriter pen, 
+            HashTable<String,String> dict) {
+        pen.println("Setting anteater");
+        dict.set("anteater","anteater");
+        pen.println("Getting buffalo");
+        try {
+            pen.println(dict.get("buffalo"));
+        } catch (Exception e) {
+            pen.println("Failed ... " + e);
+        } // try/catch
+    } // matchingKeysExpt(PrintWriter, HashTable)
 
     /**
      * Explore what happens when we use set with a wide variety of
