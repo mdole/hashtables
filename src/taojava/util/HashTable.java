@@ -33,8 +33,8 @@ public class HashTable<K,V> {
 
     Bugs to squash.
       [ ] Doesn't check for repeated keys in set.
+      [ ] Doesn't check for matching key in get.
       [ ] Doesn't handle collisions.
-      [ ] Doesn't check for matching key in get  (Does it need to?).
       [ ] The `expand` method is not implemented.
       [ ] The `remove` method is not implemented.
 
