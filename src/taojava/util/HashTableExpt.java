@@ -106,7 +106,7 @@ public class HashTableExpt {
     /**
      * Explore what happens when we remove elements.
      */
-    public static void removeExpt(PrintWriter pen, HashTable dict) {
+    public static void removeExpt(PrintWriter pen, HashTable<String,String> dict) {
         // STUB
     } // removeExpt(PrintWriter, HashTable)
 } // class HashTableExpt
