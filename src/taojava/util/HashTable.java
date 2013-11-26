@@ -2,6 +2,7 @@ package taojava.util;
 
 import java.io.PrintWriter;
 
+import java.util.Iterator;
 import java.util.Random;
 
 /**
@@ -9,7 +10,7 @@ import java.util.Random;
  *
  * @author Samuel A. Rebelsky
  */
-public class HashTable<K,V> {
+public class HashTable<K,V> implements Iterable<V> {
     // +-------+-----------------------------------------------------------
     // | Notes |
     // +-------+
@@ -228,6 +229,31 @@ public class HashTable<K,V> {
     public void reportBasicCalls(boolean report) {
         REPORT_BASIC_CALLS = report;
     } // reportBasicCalls
+
+    // +-----------+-------------------------------------------------------
+    // | Iterators |
+    // +-----------+
+
+    /**
+     * Get an iterator for the values.
+     */
+    public Iterator<V> iterator() {
+        return new Iterator<V> () {
+            public V next() {
+                // STUB
+                return null;
+            } // next()
+
+            public boolean hasNext() {
+                // STUB
+                return false;
+            } // hasNext()
+
+            public void remove() throws UnsupportedOperationException {
+                throw new UnsupportedOperationException();
+            } // remove()
+        }; // new Iterator<V>
+    } // iterator()
 
     // +---------+---------------------------------------------------------
     // | Helpers |
